@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FootToMeters</title>
+</head>
+<body>
+<p> Nhập giá trị và chọn đơn vị chuyển đổi: </p>
+<input id="value" type="number">
+<select id="unit">
+    <option> Meter -> Feet </option>
+    <option> Feet -> Meter </option>
+</select>
+<button onclick="convert()"> Chuyển đổi </button>
+<script>
+    function convert() {
+        // let span;
+        let value = document.getElementById('value').value;
+        let unit = document.getElementById('unit');
+        if (unit.selectedIndex == 0) {
+            alert((value * 3.279) + ' feet');
+            // span = (value * 3.279) + ' feet';
+        } else if (unit.selectedIndex == 1) {
+            alert((value * 0.305) + ' meter');
+            // span = (value * 0.305) + ' meter';
+        }
+        // document.getElementById("span").innerHTML == span;
+    }
+</script>
+<!--<div> Kết quả là : <span id="span"></span></div>-->
+</body>
+</html>
